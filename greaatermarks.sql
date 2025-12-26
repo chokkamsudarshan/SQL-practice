@@ -1,0 +1,12 @@
+--Query the Name of any student in STUDENTS who scored higher than  Marks. Order your output by the last three characters of each name. If two or more students both have names ending in the same last three characters (i.e.: Bobby, Robby, etc.), secondary sort them by ascending ID.
+select name from students where marks>75 order by right(name,3),ID asc;
+-- Another way to do it
+-- select name from students where marks>75 order by substr(name,-3,3),ID asc;
+-- Explanation:     
+-- In this query, we select the Name of students from the STUDENTS table who scored higher than 75 Marks. The results are ordered first by the last three characters of each name using the RIGHT function, and then by ascending ID for students with the same last three characters. The ORDER BY clause is used to specify the sorting criteria.
+-- Note:
+-- The RIGHT() function is used to extract the last three characters from the Name.
+-- The ORDER BY clause is used to sort the results based on multiple criteria.
+-- select name from students where marks>75 order by substr(name,-3,3),ID asc;
+-- select name from students where marks>75 order by right(name,3),ID asc;  
+-- select name from students where marks>75 order by substr(name,-3,3),ID asc;
