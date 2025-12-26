@@ -1,0 +1,12 @@
+--Query the sum of Northern Latitudes (LAT_N) from STATION having values greater than 38.7880 and less than 137.2345. Truncate your answer to 4 decimal places.
+SELECT ROUND(SUM(lat_n),4)  from station WHERE lat_n>38.7880 AND lat_n<137.2345;
+-- Another way to do it
+-- SELECT TRUNCATE(SUM(lat_n),4)  from station WHERE lat_n>38.7880 AND lat_n<137.2345;
+-- Explanation:             
+-- In this query, we calculate the sum of the LAT_N values from the STATION table that fall within the specified range (greater than 38.7880 and less than 137.2345). The SUM function is used to compute the total of these values. The ROUND function is then applied to truncate the result to 4 decimal places.
+-- Note:
+-- The SUM() function is used to calculate the total of LAT_N values within the specified range.
+-- The ROUND() function is used to truncate the result to 4 decimal places.
+-- The WHERE clause is used to filter LAT_N values based on the given conditions.
+-- SELECT TRUNCATE(SUM(lat_n),4)  from station WHERE lat_n>38.7880 AND lat_n<137.2345;
+-- SELECT ROUND(SUM(lat_n),4)  from station WHERE lat_n>38.7880 AND lat_n<137.2345; 

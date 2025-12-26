@@ -1,0 +1,11 @@
+--Query the smallest Northern Latitude (LAT_N) from STATION that is greater than 38.7780. Round your answer to 4 decimal places.
+select round(min(lat_n),4) from station where lat_n>38.7780;
+-- Another way to do it
+-- select truncate(min(lat_n),4) from station where lat_n>38.7780;
+-- Explanation:
+-- In this query, we find the minimum value of the LAT_N column from the STATION table that is greater than 38.7780 using the MIN function. The ROUND function is then applied to round the result to 4 decimal places.
+-- Note:
+-- The MIN() function is used to find the smallest value of LAT_N within the specified condition.
+-- The ROUND() function is used to round the result to 4 decimal places.
+-- The WHERE clause is used to filter LAT_N values based on the given condition.
+-- The TRUNCATE() function can be used as an alternative to ROUND() to truncate the

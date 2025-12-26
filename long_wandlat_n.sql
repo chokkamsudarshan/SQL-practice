@@ -1,0 +1,12 @@
+--Query the Western Longitude (LONG_W) for the largest Northern Latitude (LAT_N) in STATION that is less than 137.2345. Round your answer to 4 decimal places.
+SELECT ROUND(LONG_W,4) FROM STATION WHERE LAT_N < 137.2345 ORDER BY LAT_N DESC LIMIT 1;
+-- Another way to do it
+-- SELECT TRUNCATE(LONG_W,4) FROM STATION WHERE LAT_N < 137.2345 ORDER BY LAT_N DESC LIMIT 1;
+-- Explanation: 
+-- In this query, we retrieve the LONG_W value from the STATION table for the record with the largest LAT_N that is less than 137.2345. We use the ORDER BY clause to sort the results by LAT_N in descending order and limit the output to one record using LIMIT 1. The ROUND function is then applied to round the LONG_W value to 4 decimal places.
+-- Note:
+-- The ORDER BY clause is used to sort the results based on LAT_N in descending order.
+-- The LIMIT clause is used to restrict the output to only one record.
+-- The ROUND() function is used to round the LONG_W value to 4 decimal places.
+-- The TRUNCATE() function can be used as an alternative to ROUND() to truncate the
+-- LONG_W value to 4 decimal places.

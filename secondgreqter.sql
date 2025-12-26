@@ -1,0 +1,11 @@
+--Query the greatest value of the Northern Latitudes (LAT_N) from STATION that is less than 137.2345. Truncate your answer to 4 decimal places.
+--SELECT TRUNCATE(MAX(lat_n),4) from station WHERE lat_n<137.2345;
+-- Another way to do it 
+-- SELECT ROUND(MAX(lat_n),4) from station WHERE lat_n<137.2345;
+-- Explanation:
+-- In this query, we find the maximum value of the LAT_N column from the STATION table that is less than 137.2345 using the MAX function. The TRUNCATE function is then applied to truncate the result to 4 decimal places.
+-- Note:
+-- The MAX() function is used to find the greatest value of LAT_N within the specified condition
+select round(Lat_n,4) from station where lat_n<137.2345 order by lat_n DESC limit 1;
+-- The TRUNCATE() function is used to truncate the result to 4 decimal places.
+-- The WHERE clause is used to filter LAT_N values based on the given condition.    
