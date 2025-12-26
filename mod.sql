@@ -1,0 +1,3 @@
+--Query a list of CITY names from STATION for cities that have an even ID number. Print the results in any order, but exclude duplicates from the answer.
+select distinct city from STATION where id%2=0 
+----->MOD(id,2)=0 is the standard formula for doing modulous it means we are doing modulous of ID by 2 and the reminder should be 0, like if we want to get odd so we can write like MOD(ID,2)=1 like that, but you can try ID%2=0 
