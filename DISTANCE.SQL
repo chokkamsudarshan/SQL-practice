@@ -1,0 +1,23 @@
+-- --Consider  and  to be two points on a 2D plane where  are the respective minimum and maximum values of Northern Latitude (LAT_N) and  are the respective minimum and maximum values of Western Longitude (LONG_W) in STATION.
+
+-- Query the Euclidean Distance between points  and  and format your answer to display  decimal digits.
+select round(sqrt(power(max(lat_n)-min(lat_n),2)+power(max(long_w)-min(long_w),2)),4) as euclidean_distance from station;   
+-- Another way to do it     
+-- select truncate(sqrt(power(max(lat_n)-min(lat_n),2)+power(max(long_w)-min(long_w),2)),4) as euclidean_distance from station;
+-- Explanation:
+-- In this query, we calculate the Euclidean Distance between points  and  by finding the difference between the maximum and minimum values of LAT_N and LONG_W from the STATION table. We then use the Pythagorean theorem to calculate the Euclidean Distance. The ROUND function is applied to round the result to 4 decimal places.
+-- Note:
+-- The MAX() function is used to find the maximum values of LAT_N and LONG_W.
+-- The MIN() function is used to find the minimum values of LAT_N and LONG_W.   
+-- The POWER() function is used to raise the differences to the power of 2.
+-- The SQRT() function is used to calculate the square root of the sum of the squared differences.
+-- The ROUND() function is used to round the result to 4 decimal places.
+-- The TRUNCATE() function can be used as an alternative to ROUND() to truncate the
+-- The AS clause is used to give a name to the resulting column (euclidean_distance).
+-- The addition operator (+) is used to sum the squared differences in LAT_N and LONG_W.    
+-- The subtraction operator (-) is used to calculate the differences between maximum and minimum values.
+-- The FROM clause specifies the table (STATION) from which to retrieve the data.
+-- The parentheses are used to group the operations for clarity and to ensure correct order of operations.
+-- The SQL query calculates the Euclidean Distance between two points defined by the minimum and maximum values of Northern Latitude (LAT_N) and Western Longitude (LONG_W) in the STATION table, rounding the result to four decimal places.   
+-- The SQL query calculates the Euclidean Distance between two points defined by the minimum and maximum values of Northern Latitude (LAT_N) and Western Longitude (LONG_W) in the STATION table, rounding the result to four decimal places.   
+-- --- IGNORE ---
