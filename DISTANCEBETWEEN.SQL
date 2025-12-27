@@ -1,0 +1,24 @@
+-- --Consider  and  to be two points on a 2D plane.
+
+--  happens to equal the minimum value in Northern Latitude (LAT_N in STATION).
+--  happens to equal the minimum value in Western Longitude (LONG_W in STATION).
+--  happens to equal the maximum value in Northern Latitude (LAT_N in STATION).
+--  happens to equal the maximum value in Western Longitude (LONG_W in STATION).
+-- Query the Manhattan Distance between points  and  and round it to a scale of  decimal places.
+select round(((max(lat_n)-min(lat_n))+(max(long_w)-min(long_w))),4) as manhattan_distance from station;
+-- Another way to do it     
+-- select truncate(((max(lat_n)-min(lat_n))+(max(long_w)-min(long_w))),4) as manhattan_distance from station;
+-- Explanation: 
+-- In this query, we calculate the Manhattan Distance between points  and  by finding the difference between the maximum and minimum values of LAT_N and LONG_W from the STATION table. We then sum these differences to get the Manhattan Distance. The ROUND function is applied to round the result to 4 decimal places. 
+-- Note:
+-- The MAX() function is used to find the maximum values of LAT_N and LONG_W.
+-- The MIN() function is used to find the minimum values of LAT_N and LONG_W.   
+-- The ROUND() function is used to round the result to 4 decimal places.
+-- The TRUNCATE() function can be used as an alternative to ROUND() to truncate the result to 4 decimal places.
+-- The AS clause is used to give a name to the resulting column (manhattan_distance).
+-- The addition operator (+) is used to sum the differences in LAT_N and LONG_W.    
+-- The subtraction operator (-) is used to calculate the differences between maximum and minimum values.
+-- The FROM clause specifies the table (STATION) from which to retrieve the data.
+-- The parentheses are used to group the operations for clarity and to ensure correct order of operations.  
+-- The SQL query calculates the Manhattan Distance between two points defined by the minimum and maximum values of Northern Latitude (LAT_N) and Western Longitude (LONG_W) in the STATION table, rounding the result to four decimal places.
+-- The SQL query calculates the Manhattan Distance between two points defined by the minimum and maximum values of Northern Latitude (LAT_N) and Western Longitude (LONG_W) in the STATION table, rounding the result to four decimal places.
